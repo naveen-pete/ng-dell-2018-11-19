@@ -6,6 +6,9 @@ import { Product } from '../models/product';
   templateUrl: './products.component.html'
 })
 export class ProductsComponent {
+  showMessage: boolean = false;
+  product: Product = new Product();
+
   products: Product[] = [
     {
       name: 'Dell Latitude',
@@ -28,9 +31,25 @@ export class ProductsComponent {
 
   ];
 
-  onSaveClick(e) {
+  onSave() {
     console.log('Product Saved!');
+    console.log(this.product);
+    this.products.unshift(this.product);
+    this.product = new Product();
+    this.showMessage = true;
 
-    console.log(e);
+    // const obj = this;
+
+    // setTimeout(function() {
+    //   obj.showMessage = false;
+    //   console.log('showMessage has been reset to false');
+    //   console.log(this);
+    // }, 3000);
+
+    setTimeout(() => {
+      this.showMessage = false;
+      console.log('showMessage has been reset to false');
+      console.log(this);
+    }, 3000);
   }
 }
