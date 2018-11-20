@@ -1,0 +1,26 @@
+<h3>Products</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="md-col-5">Form</div>
+    <div class="md-col-7">
+        <div class="card" *ngFor="let product of products">
+            <div class="card-header">
+              {{ product.name | uppercase }}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"
+                [ngStyle]="{ 'color': product.isAvailable ? 'blue' : 'red' }">
+                {{ product.description }}
+              </h5>
+              <p class="card-text">{{ product.price | currency : 'INR' }}</p>
+              <p class="card-text">Available? <span class="badge"
+                [ngClass]="{ 'badge-success': product.isAvailable, 'badge-danger': !product.isAvailable }">{{ product.isAvailable ? 'Yes' : 'No' }}</span></p>
+              <p class="card-text">Available? <span class="badge"
+                [ngClass]="product.isAvailable ? 'badge-success' :'badge-danger'">{{ product.isAvailable ? 'Yes' : 'No' }}</span></p>
+            </div>
+        </div>
+
+      </div>
+  </div>
+</div>
