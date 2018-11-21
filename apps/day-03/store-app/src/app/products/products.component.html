@@ -3,13 +3,19 @@
     <h3>Product Form</h3>
 
     <!-- Product Form -->
-    <app-product-form (productCreated)="onProductCreated($event)"></app-product-form>
+    <!-- <app-product-form (productCreated)="onProductCreated($event)"></app-product-form> -->
+    <app-product-form></app-product-form>
   </div>
 
   <div class="col-md-8">
     <h3>Products</h3>
 
+    <input type="text"
+      class="form-control"
+      placeholder="Search..."
+      [(ngModel)]="searchText">
+
     <!-- Product Detail-->
-    <app-product-detail [product]="p" *ngFor="let p of products"></app-product-detail>
+    <app-product-detail [product]="p" *ngFor="let p of products | filterProducts : searchText"></app-product-detail>
   </div>
 </div>

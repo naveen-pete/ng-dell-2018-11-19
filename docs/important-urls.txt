@@ -1,2 +1,12 @@
 Understanding the Angular CLI Workspace File
 - https://nitayneeman.com/posts/understanding-the-angular-cli-workspace-file/
+
+Tree Shakeable Providers and Services in Angular
+- https://coryrylan.com/blog/tree-shakeable-providers-and-services-in-angular
+
+Flaw: Constructor does Real Work
+- http://misko.hevery.com/code-reviewers-guide/flaw-constructor-does-real-work/
+
+Lifecycle Hooks
+- https://angular.io/guide/lifecycle-hooks
+

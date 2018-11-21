@@ -7,6 +7,9 @@ import { ProductsComponent } from './products/products.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { FilterProductsPipe } from './filter-products.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
+import { ProductsService } from './services/products.service';
 
 @NgModule({
   declarations: [
@@ -14,14 +17,15 @@ import { ProductFormComponent } from './product-form/product-form.component';
     ProductsComponent,
     HeaderComponent,
     ProductDetailComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    FilterProductsPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-
-  providers: [],
+  providers: [ ProductsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
