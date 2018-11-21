@@ -1,0 +1,2 @@
+Understanding the Angular CLI Workspace File
+- https://nitayneeman.com/posts/understanding-the-angular-cli-workspace-file/
