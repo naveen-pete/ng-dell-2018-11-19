@@ -6,9 +6,6 @@ import { Product } from '../models/product';
   templateUrl: './products.component.html'
 })
 export class ProductsComponent {
-  showMessage = false;
-  product: Product = new Product();
-
   products: Product[] = [
     {
       id: 1,
@@ -33,24 +30,7 @@ export class ProductsComponent {
     },
   ];
 
-  onSubmit() {
-    console.log('New product saved successfully!');
-    this.products.unshift(this.product);
-    this.product = new Product();
-    this.showMessage = true;
-
-    // const obj = this;
-
-    // Traditional JS function
-    // setTimeout(function() {
-    //   obj.showMessage = false;
-    //   console.log('showMessage has been reset to false');
-    //   console.log(this);
-    // }, 3000);
-
-    // Arrow function
-    setTimeout(() => {
-      this.showMessage = false;
-    }, 3000);
+  onProductCreated(product: Product) {
+    this.products.unshift(product);
   }
 }
