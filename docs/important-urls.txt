@@ -10,3 +10,11 @@ Flaw: Constructor does Real Work
 Lifecycle Hooks
 - https://angular.io/guide/lifecycle-hooks
 
+The Angular Library Series - Creating a Library with Angular CLI
+
+Post: 
+  1. https://blog.angularindepth.com/creating-a-library-in-angular-6-87799552e7e5
+  2. https://blog.angularindepth.com/creating-a-library-in-angular-6-part-2-6e2bc1e14121
+  3. https://blog.angularindepth.com/the-angular-library-series-publishing-ce24bb673275
+  
+GitHub: https://github.com/t-palmer/example-ng6-lib
