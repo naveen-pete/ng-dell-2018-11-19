@@ -1,12 +1,13 @@
+import $ from 'jquery';
+
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/from';
-import 'rxjs/add/operator/reduce';
-import 'rxjs/add/operator/scan';
+import 'rxjs/add/observable/fromEvent';
 
-const numbers = [10, 15, 20, 25, 30];
+const ctrl = $('#btn');
 
-const stream = Observable.from(numbers).reduce((total, currentValue) => {
-  return total + currentValue;
-}, 0);
-
-stream.subscribe(total => console.log('total:', total));
+const stream = Observable.fromEvent(ctrl, 'click');
+stream.subscribe(
+  event => console.log('event:', event),
+  err => console.log('error:', err),
+  () => console.log('completed!')
+);
