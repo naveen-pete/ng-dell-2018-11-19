@@ -4,15 +4,8 @@
       "id": 1,
       "name": "Data Structures and Algorithms",
       "description": "Book description",
-      "isAvailable": true,
-      "price": 525
-    },
-    {
-      "id": 2,
-      "name": "Premsons 608 Four Bearing Fidget Spinner",
-      "description": "Perfect toy for fidgeters. Updated",
-      "isAvailable": true,
-      "price": 150
+      "isAvailable": false,
+      "price": 600
     },
     {
       "id": 3,
@@ -22,10 +15,10 @@
       "price": 299
     },
     {
-      "name": "p1",
-      "description": "p1 desc",
-      "price": 10,
-      "isAvailable": true,
+      "name": "p20",
+      "description": "p20 desc",
+      "price": 200,
+      "isAvailable": false,
       "id": 4
     }
   ],
