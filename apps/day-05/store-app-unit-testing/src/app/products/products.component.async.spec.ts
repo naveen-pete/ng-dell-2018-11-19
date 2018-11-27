@@ -77,7 +77,7 @@ describe('ProductsComponent (async)', () => {
       .then(() => expect(component.products).toEqual(testProducts));
   }));
 
-  it(
+  xit(
     'should set products property with the items returned from the server (Promise, fakeAsync, tick)',
     fakeAsync(() => {
       spyOn(service, 'getProductsPromise').and.returnValue(
